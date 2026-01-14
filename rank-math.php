@@ -34,7 +34,7 @@ if (!class_exists(__NAMESPACE__ . '\\RankMathMods', false)) {
     }
 
     // let's go!
-    add_action('wp_head', function () {
+    add_action('init', function () {
         static $instance = null;
 
         null === $instance ? $instance = new RankMathMods() : null;
